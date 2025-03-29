@@ -6,13 +6,14 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 05:31:24 by ajamoun           #+#    #+#             */
-/*   Updated: 2025/03/29 05:33:02 by ajamoun          ###   ########.fr       */
+/*   Updated: 2025/03/29 06:20:00 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	int	*nums;
 	int	size;

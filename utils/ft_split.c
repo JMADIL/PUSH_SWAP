@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 05:15:43 by ajamoun           #+#    #+#             */
-/*   Updated: 2025/03/29 05:16:08 by ajamoun          ###   ########.fr       */
+/*   Updated: 2025/03/29 06:15:26 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ static char	**word_cpy(const char *s, char c, char **arr)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**result;
+	char **result;
 
 	if (!s)
 		return (NULL);

@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/29 06:15:05 by ajamoun           #+#    #+#             */
+/*   Updated: 2025/03/29 06:19:44 by ajamoun          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
 # include <limits.h>
 # include <stdlib.h>
-#include <stdio.h>
 
 // libc - functions
 char	**ft_split(char const *s, char c);
@@ -19,11 +30,9 @@ int		ft_atoi(const char *str);
 int		ft_isdigit(int x);
 void	ft_free(char **arr);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
-
-
 // push_swap - functions
 
 int		*pars_args(int ac, char **av, int *size);
-int has_duplicates(int *nums, int count);
+int		has_duplicates(int *nums, int count);
 
 #endif
