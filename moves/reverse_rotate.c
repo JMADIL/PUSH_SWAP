@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/29 05:31:24 by ajamoun           #+#    #+#             */
-/*   Updated: 2025/03/30 03:18:40 by ajamoun          ###   ########.fr       */
+/*   Created: 2025/03/30 04:44:53 by ajamoun           #+#    #+#             */
+/*   Updated: 2025/03/30 04:52:07 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	main(int ac, char **av)
+void	reverse_rotate(t_list **stack)
 {
-	int	*nums;
-	int	size;
+	t_list *b_last;
+	t_list *last;
 
-	nums = pars_args(ac, av, &size);
-	if (!nums)
-		printf("Error\n");
-	while (size)
+	if (!(*stack) || !(*stack)->next)
+		return ;
+	last = *stack;
+	while (last->next)
 	{
-		printf("%d\n", nums[size - 1]);
-		size--;
+		b_last = last;
+		last = last->next;
 	}
+	b_last->next = NULL;
+	last->next = *stack;
+	*stack = last;
 }

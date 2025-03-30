@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/29 05:31:24 by ajamoun           #+#    #+#             */
-/*   Updated: 2025/03/30 03:18:40 by ajamoun          ###   ########.fr       */
+/*   Created: 2025/03/30 03:07:54 by ajamoun           #+#    #+#             */
+/*   Updated: 2025/03/30 03:23:23 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	main(int ac, char **av)
+void	rotate(t_list **stack)
 {
-	int	*nums;
-	int	size;
+	t_list	*first;
+	t_list	*last;
 
-	nums = pars_args(ac, av, &size);
-	if (!nums)
-		printf("Error\n");
-	while (size)
-	{
-		printf("%d\n", nums[size - 1]);
-		size--;
-	}
+	if (!(*stack) || !(*stack)->next)
+		return ;
+	first = *stack;
+	last = ft_lstlast(*stack);
+	*stack = first->next;
+	last->next = first;
+	first->next = NULL;
 }

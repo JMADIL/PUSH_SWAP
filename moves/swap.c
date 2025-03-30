@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/29 05:31:24 by ajamoun           #+#    #+#             */
-/*   Updated: 2025/03/30 03:18:40 by ajamoun          ###   ########.fr       */
+/*   Created: 2025/03/29 06:20:57 by ajamoun           #+#    #+#             */
+/*   Updated: 2025/03/30 03:06:24 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	main(int ac, char **av)
+void	swap(t_list **stack)
 {
-	int	*nums;
-	int	size;
+	t_list *first;
+	t_list *second;
 
-	nums = pars_args(ac, av, &size);
-	if (!nums)
-		printf("Error\n");
-	while (size)
-	{
-		printf("%d\n", nums[size - 1]);
-		size--;
-	}
+	if (!(*stack) || !(*stack)->next)
+		return ;
+	first = *stack;
+	second = first->next;
+	first->next = second->next;
+	second->next = first;
+	*stack = second;
 }
