@@ -8,6 +8,8 @@ SRCS = 	pars_args.c \
 		utils/ft_split.c \
 		utils/utils_1.c \
 		utils/utils_0.c \
+		utils/lst_utils.c \
+		assign_indexes.c \
 		
 OBJS = $(SRCS:.c=.o)
 
