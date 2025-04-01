@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 16:58:13 by ajamoun           #+#    #+#             */
-/*   Updated: 2025/03/29 05:37:18 by ajamoun          ###   ########.fr       */
+/*   Updated: 2025/04/01 16:13:20 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ int	ft_atoi(const char *str)
 	}
 	return (rs * s);
 }
-int has_duplicates(int *nums, int count)
+
+int	has_duplicates(int *nums, int count)
 {
 	int	i;
 	int	j;
@@ -59,6 +60,7 @@ int has_duplicates(int *nums, int count)
 	}
 	return (1);
 }
+
 char	*ft_strdup(const char *src)
 {
 	char	*dest;

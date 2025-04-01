@@ -10,6 +10,11 @@ SRCS = 	pars_args.c \
 		utils/utils_0.c \
 		utils/lst_utils.c \
 		assign_indexes.c \
+		simple_sort.c \
+		moves/push.c \
+		moves/rotate.c \
+		moves/reverse_rotate.c \
+		moves/swap.c \
 		
 OBJS = $(SRCS:.c=.o)
 

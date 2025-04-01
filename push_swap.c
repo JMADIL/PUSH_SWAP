@@ -6,12 +6,26 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 05:31:24 by ajamoun           #+#    #+#             */
-/*   Updated: 2025/03/30 11:22:30 by ajamoun          ###   ########.fr       */
+/*   Updated: 2025/04/01 17:54:55 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
+
+int	stack_is_sorted(t_list *lst)
+{
+	t_list	*head;
+
+	head = lst;
+	while (head && head->next)
+	{
+		if (head->content > head->next->content)
+			return (0);
+		head = head->next;
+	}
+	return (1);
+}
 
 t_list	*init_stack(int *nums, int size)
 {
@@ -46,7 +60,18 @@ int	check_input(int *nums, int ac, int size)
 	}
 	return (1);
 }
-
+void	push_swap(t_list **stack_a, t_list **stack_b, int size)
+{
+	init_index(*stack_a);
+	if (stack_is_sorted(*stack_a))
+		return ;
+	if (size == 2 || size == 3)
+		sort_two_or_three(stack_a, size);
+	if (size == 4)
+		sort_4_nums(stack_a, stack_b);
+	if(size == 5)
+		sort_5_nums(stack_a, stack_b);
+}
 int	main(int ac, char **av)
 {
 	t_list	*stack_a;
@@ -60,12 +85,11 @@ int	main(int ac, char **av)
 		return (1);
 	stack_a = init_stack(nums, size);
 	stack_b = NULL;
-	init_index(stack_a);
-	while (stack_a)
-	{
-		printf("%d", stack_a->content);
-		printf(" index = %d\n", stack_a->index);
-		stack_a = stack_a->next;
-	}
-	
+	push_swap(&stack_a, &stack_b, size);
+	// while (stack_a)
+	// {
+	// 	printf("%d", stack_a->content);
+	// 	printf(" index = %d\n", stack_a->index);
+	// 	stack_a = stack_a->next;
+	// }
 }

@@ -6,13 +6,11 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 08:55:19 by ajamoun           #+#    #+#             */
-/*   Updated: 2025/03/30 10:50:35 by ajamoun          ###   ########.fr       */
+/*   Updated: 2025/04/01 16:13:52 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 void	swap_elements(int *a, int *b)
 {
@@ -22,6 +20,7 @@ void	swap_elements(int *a, int *b)
 	*a = *b;
 	*b = tmp;
 }
+
 int	*list_to_numbers(t_list *stack_a, int size)
 {
 	int		*tab;
@@ -65,12 +64,13 @@ int	*sort_tab(t_list *stack_a, int size)
 	}
 	return (tab);
 }
+
 void	init_index(t_list *stack_a)
 {
-	int i;
-	int size;
-	int *tab;
-	t_list *tmp;
+	int		i;
+	int		size;
+	int		*tab;
+	t_list	*tmp;
 
 	size = ft_lstsize(stack_a);
 	tmp = stack_a;

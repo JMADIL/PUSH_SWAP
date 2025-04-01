@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 15:45:13 by ajamoun           #+#    #+#             */
-/*   Updated: 2025/03/29 05:23:23 by ajamoun          ###   ########.fr       */
+/*   Updated: 2025/04/01 16:12:48 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	res[i] = '\0';
 	return (res);
 }
+
 static int	in_set(char c, const char *set)
 {
 	while (*set)
@@ -82,6 +83,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res[end - start] = '\0';
 	return (res);
 }
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 {
 	size_t	src_len;
