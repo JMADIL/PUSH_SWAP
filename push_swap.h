@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 06:15:05 by ajamoun           #+#    #+#             */
-/*   Updated: 2025/04/01 18:40:15 by ajamoun          ###   ########.fr       */
+/*   Updated: 2025/04/02 11:25:45 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,6 @@ int					get_min(t_list *list);
 void				sort_two_or_three(t_list **stack_a, int size);
 void				sort_4_nums(t_list **stack_a, t_list **stack_b);
 void				sort_5_nums(t_list **stack_a, t_list **stack_b);
+void				radix_sort(t_list **stack_a, t_list **stack_b);
 
 #endif

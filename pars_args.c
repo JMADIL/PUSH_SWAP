@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 06:06:24 by ssbaytri          #+#    #+#             */
-/*   Updated: 2025/04/01 16:14:08 by ajamoun          ###   ########.fr       */
+/*   Updated: 2025/04/02 11:24:57 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,8 +110,7 @@ int	*pars_args(int ac, char **av, int *size)
 	while (i < count)
 	{
 		if (!is_valid_number(splitted_args[i]))
-			return (free(nums), ft_free(splitted_args), free(joined_args),
-				NULL);
+			return (free(nums), ft_free(splitted_args), free(joined_args), NULL);
 		nums[i] = ft_atoi(splitted_args[i]);
 		i++;
 	}

@@ -15,6 +15,7 @@ SRCS = 	pars_args.c \
 		moves/rotate.c \
 		moves/reverse_rotate.c \
 		moves/swap.c \
+		radix_sort.c \
 		
 OBJS = $(SRCS:.c=.o)
 
