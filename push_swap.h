@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 06:15:05 by ajamoun           #+#    #+#             */
-/*   Updated: 2025/04/02 11:25:45 by ajamoun          ###   ########.fr       */
+/*   Updated: 2025/04/02 17:06:41 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void				ss(t_list **stack_a, t_list **stack_b);
 void				init_index(t_list *stack_a);
 int					stack_is_sorted(t_list *lst);
 int					get_min(t_list *list);
+void				free_lst(t_list *list);
 
 // sort_functions
 

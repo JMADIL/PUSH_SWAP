@@ -6,11 +6,12 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 06:06:24 by ssbaytri          #+#    #+#             */
-/*   Updated: 2025/04/02 11:24:57 by ajamoun          ###   ########.fr       */
+/*   Updated: 2025/04/02 17:07:09 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdlib.h>
 
 static int	digit_is_ok(char *str, int *i, long *res, int sign)
 {
@@ -110,11 +111,12 @@ int	*pars_args(int ac, char **av, int *size)
 	while (i < count)
 	{
 		if (!is_valid_number(splitted_args[i]))
-			return (free(nums), ft_free(splitted_args), free(joined_args), NULL);
+			return (free(nums), ft_free(splitted_args), free(joined_args),
+				NULL);
 		nums[i] = ft_atoi(splitted_args[i]);
 		i++;
 	}
 	if (!has_duplicates(nums, count))
 		return (free(nums), ft_free(splitted_args), free(joined_args), NULL);
-	return (ft_free(splitted_args), *size = count, nums);
+	return (free(joined_args), ft_free(splitted_args), *size = count, nums);
 }

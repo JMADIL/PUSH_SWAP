@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 03:22:24 by ajamoun           #+#    #+#             */
-/*   Updated: 2025/03/30 09:03:04 by ajamoun          ###   ########.fr       */
+/*   Updated: 2025/04/02 17:06:17 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,19 @@ int	ft_lstsize(t_list *lst)
 		lst = lst->next;
 	}
 	return (count);
+}
+
+void	free_lst(t_list *list)
+{
+	t_list	*tmp;
+
+	if (!list)
+		return ;
+	while (list)
+	{
+		tmp = list;
+		list = list->next;
+		free(tmp);
+		tmp = NULL;
+	}
 }
