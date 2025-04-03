@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 16:58:13 by ajamoun           #+#    #+#             */
-/*   Updated: 2025/04/01 16:13:20 by ajamoun          ###   ########.fr       */
+/*   Updated: 2025/04/03 09:13:00 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,18 @@ char	*ft_strdup(const char *src)
 	}
 	dest[i] = '\0';
 	return (dest);
+}
+
+void	free_free(char **splitted, char *joined_args)
+{
+	int	i;
+
+	i = 0;
+	while (splitted[i])
+	{
+		free(splitted[i]);
+		i++;
+	}
+	free(splitted);
+	free(joined_args);
 }

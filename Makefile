@@ -2,6 +2,9 @@ NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
+RED = \033[31m
+BLUE = \033[34m
+
 SRCS = 	pars_args.c \
 		push_swap.c \
 		utils/utils_2.c \
@@ -20,6 +23,12 @@ SRCS = 	pars_args.c \
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
+	@echo "$(BLUE)$(BOLD)██████╗ ██╗   ██╗███████╗██╗  ██╗    ███████╗██╗    ██╗ █████╗ ██████╗ $(RESET)"
+	@echo "$(BLUE)$(BOLD)██╔══██╗██║   ██║██╔════╝██║  ██║    ██╔════╝██║    ██║██╔══██╗██╔══██╗$(RESET)"
+	@echo "$(BLUE)$(BOLD)██████╔╝██║   ██║███████╗███████║    ███████╗██║ █╗ ██║███████║██████╔╝$(RESET)"
+	@echo "$(BLUE)$(BOLD)██╔═══╝ ██║   ██║╚════██║██╔══██║    ╚════██║██║███╗██║██╔══██║██╔═══╝ $(RESET)"
+	@echo "$(BLUE)$(BOLD)██║     ╚██████╔╝███████║██║  ██║    ███████║╚███╔███╔╝██║  ██║██║     $(RESET)"
+	@echo "$(BLUE)$(BOLD)╚═╝      ╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝     $(RESET)"
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
@@ -29,10 +38,9 @@ $(NAME): $(OBJS)
 
 clean:
 	rm -f $(OBJS)
-
 fclean: clean
 	rm -f $(NAME)
-
+	@echo "$(RED)Executable removed$(RESET)"
 re: fclean all
 
 .PHONY: all clean fclean re
